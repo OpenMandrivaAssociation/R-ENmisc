@@ -3,7 +3,7 @@
 
 Name:             R-%{packname}
 Version:          1.2_3
-Release:          1
+Release:          2
 Summary:          Neuwirth miscellaenous
 Group:            Sciences/Mathematics
 License:          GPL-2
