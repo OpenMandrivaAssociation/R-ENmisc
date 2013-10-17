@@ -2,18 +2,19 @@
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
-Version:          1.2_3
-Release:          2
+Version:          1.2.7
+Release:          1
 Summary:          Neuwirth miscellaenous
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.2-3.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/ENmisc_1.2-7.tar.gz
 BuildArch:        noarch
-Requires:         R-core R-Hmisc R-vcd R-gWidgets R-gWidgetstcltk
-Requires:         R-RColorBrewer
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-Hmisc
-BuildRequires:    R-vcd R-gWidgets R-gWidgetstcltk R-RColorBrewer
+Requires:         R-core
+Requires:         R-Hmisc R-vcd R-gWidgets R-gWidgetstcltk R-RColorBrewer 
+Requires:         R-Rcmdr
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-Hmisc R-vcd R-gWidgets R-gWidgetstcltk R-RColorBrewer
+BuildRequires:    R-Rcmdr
 BuildRequires:    x11-server-xvfb
 
 %description
@@ -45,3 +46,5 @@ xvfb-run %{_bindir}/R CMD check %{packname}
 %{rlibdir}/%{packname}/Meta
 %{rlibdir}/%{packname}/R
 %{rlibdir}/%{packname}/help
+
+
